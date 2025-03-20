@@ -15,65 +15,106 @@ Date Last Modified:3/11/2025-->
         <meta name="viewport" content="width=device-width">
         <title>web dev project 2</title>
         <link rel="stylesheet" href="css/style.css">
+        <style>
+            /* this was to make it so when you click the stuff on the navigation bar it has a smooth effect when going to that section in the page */
+            html{
+                scroll-behavior: smooth;    
+            }
+            /* to cange the original color and remove the underline of the link*/
+            a{
+                text-decoration: none;
+                color: darkblue;
+            }
+            /* this was to align the images in the center   */
+            .calss{
+                text-align: center;
+            }
+            .calss img{
+                display: inline-block;
+            }
+        </style>
     </head>
     <body>
-        <header>
+        <!-- navigation bar with classes for interactivity  -->
+        <header> 
             <div class="container">
                 <h2 class="logo"><a href="index.html">TREATY<span>1</span></a></h2>
                     <nav>
                         <ul>
                             <li><a href="index.html">home</a></li>
-                            <li><a href="history">History</a></li>
-                            <li><a href="blank">blank</a></li>
-                            <li><a href="blank">blank</a></li>
+                            <li><a href="#Communities">Communities</a></li>
+                            <li><a href="#Reserves">Reserves</a></li>
+                            <li><a href="#Treaty">Treaty</a></li>
+                            <li><a href="#Map">Map</a></li>
                         </ul>
                     </nav>
             </div>
         </header>
         <div> 
             <img  src="images/maxresdefault.jpg" alt="Treaty" class="image">
-            <figcaption><a href="htt    ca/legislature/about/land_acknowledgement.html">Image source</a></figcaption>
+            <figcaption><a href="https://www.gov.mb.ca/legislature/about/land_acknowledgement.html">Img source</a></figcaption>
         </div>
         <section>
-            <div>
-                <h1>Communities involved</h1>
-                </div>
-                <div>
-                <p>Treaty 1 is and agreement that was established on august 3, 1871, between the Crown,<br>
-                    Anishinaabe, Swampy Cree, Canadian based first nation. A series of treaty called the <br>
-                    numberd Treaty that occured between 1871 and 1921, it was held to be essentialy about <br>
-                    peace with each treaty. <br>
-                </p>
-                    <img src="images/Treaty_1_Territory.png" alt="treaty 1 communities">
-            </div>
-            <div>
-                <figcaption><a href="https://en.wikipedia.org/wiki/Treaty_1">source</a></figcaption>
-            </div>
+            <!-- div to group them together, and the class is to center the image -->
+                        <div class="calss">
+                            <h1 id="Communities">Communities involved</h1>
+                            <br>
+                                <img src="images/Treaty_1_Territory.png" alt="treaty 1 communities" width="500" height="300">
+                                <!-- figcap to show where i go the sorce from  -->
+                                <figcaption><a href="https://en.wikipedia.org/wiki/Treaty_1"> Img source</a></figcaption>
+                                <p>Treaty 1 is and agreement that was established on august 3, 1871, between the Crown,<br>
+                                    Anishinaabe, Swampy Cree, Canadian based first nation. A series of treaty called the <br>
+                                    numberd Treaty that occured between 1871 and 1921, it was held to be essentialy about <br>
+                                    peace with each treaty. <br>
+                                </p>
+                        <figcaption><a href="https://en.wikipedia.org/wiki/Treaty_1#:~:text=Significance%20of%20Treaty%201,-The%20signing%20of&text=For%20Governor%20Adams%20Archibald%20the,held%20a%20much%20larger%20significance.">Read more</a></figcaption>
+                    </div>
         </section>
-
-        
+        <!-- the horizontal line is kind of like br but it is a line without much link breake.
+        I used it to seperate the sections and make it more clear to read.-->
+        <!-- the width represent how long you want the line to be. size 5 is a type of line that is thick, there is other ones like size 1 or 2.
+        -->
+        <hr width="500" size="5" color="black">
         <br>
         <br>
+            <div class="calss">
+                <!-- id is a part if the navigation where it goes to this section  -->
+                <h1 id="Reserves">Urban Reserve</h1>
+                    <img src="images/Seven_nations_copy.jpg" alt="Seven first nations" width="500" height="300">
+                    <figcaption><a href="https://www.winnipeg.ca/fr/node/33410">Img source</a></figcaption>
+                    <p>Winnipeg MB treaty 1 territory and the city of winnipeg have arrived at the Gaawijijigemangit Agreement, <br>
+                    that would see the city of Winnipeg provide services for a proposed urban reserve at the Naawi-Oodena site <br>
+                    the government council of the Treaty 1 nation had oproved of the agreement May 27, 2022. Now the agreement <br>
+                    only need the opproval of the winnipeg city council to be able to go forward to sign with the 7 treaty 1 first <br>
+                    nation territorys. <br>
+                </p>
+                <figcaption><a href="https://www.winnipeg.ca/fr/node/33410">Read more..</a></figcaption>
+        </div>
+        <hr width="500" size="5" color="black">
         <br>
         <br>
-        <div>
-            <h1>Reasherch</h1>
-            <p>stuff</p>
-            <img src="" alt="">
-        <br>
-        <br>
-        <br>
-        <div>
-            <h1>what was included in the Treaty?</h1>
-            <p>under the terms of treaties each band received larg 160 acres of land for each family of five, <br>
+        <div class="calss">
+            <h1 id="Treaty">What Was Included In The Treaty?</h1>
+                <img src="images/4913942c-18ec-4c1c-be27-6d74ec04cfbe.jpg" alt="included in the treat" width="500" height="300">
+                <figcaption><a href="https://www.thecanadianencyclopedia.ca/en/article/aboriginal-treaties">Img source</a></figcaption>
+                <p>Under the terms of treaties each band received larg 160 acres of land for each family of five, <br>
                 families under 5 will receive samller land in. In treaty 1, the band of Yellow Quill recieved <br>
                 a 25 square miles of land to be laid out arounf the reserve. The government had also agreed to <br>
                 maintain school on each reserve whenever the "indians" wanted it. The government also made it  <br>        
-                porhibited the introduction or sale of liquor on each reserves.</p>
-            <figcaption><a href=""></a></figcaption>
-            <img src="" alt="">
+                porhibited the introduction or sale of liquor on each reserves. <br>
+            </p>
+            <figcaption><a href="https://www.rcaanc-cirnac.gc.ca/DAM/DAM-CIRNAC-RCAANC/DAM-TAG/STAGING/texte-text/tre1-2_1100100028661_eng.pdf">Read more</a></figcaption>
         </div>
-        
+        <hr width="500" size="5" color="black">
+        <br>
+        <br>
+        <div class="calss">
+            <h1 id="Map">Map</h1>
+            <iframe src="https://native-land.ca/" title="first nation land map" frameborder="0" width="900" height="500"></iframe>
+        </div>
+        <footer>
+            <p>&copy; 2025 Treaty 1 | BY MARWAN
+        </footer>
     </body>
 
 </html>

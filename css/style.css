@@ -20,35 +20,42 @@ header::after{
   display:table;
   clear: both;
 }
+/* this was to make the logo go to the left side if the navigation */
 .logo{
   float: left;
   margin-left: 25px;
   color: white;
 }
+/*  put this in for to remove the color and underline of the link */
 .logo a{
   text-decoration: none;
   color: white;
 }
+/* navigation bar  */
 nav{
   float: right;
 }
+/* the putting the unorderd list in place and changed made it that it didnt show the dots */
 nav ul{
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+/* for the list i put in inline block so it would kind if float in the middle */
 nav li{
   display: inline-block;
   margin:0 35px;
   padding-top: 23px;
   position: relative;
 }
+/* this was to remove the ugly decoration of the link.*/
 nav a{
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
 }
+/* this made it that every time you hoverd hover home or anyting on the navbar it would change color on hover. */
 nav a:hover{
   color: #000;
 }
@@ -65,24 +72,27 @@ nav a::before{
   /* this is for the bar over the home e.t.c, it animates in and out */
   transition: all ease-in-out 250ms;
 }
+/* the size of the line over the li items since it absolute it is as big as the text */
 nav a:hover::before{
   width: 100%;
 }
+/*  this was a part of the logo to change the color of the number 1 */
 span{
   color: red;
 }
+/* for the main image to make it as big as possible */
 .image{
   position: relative;
   width: 100%;
   height: 100vh;
   background-size: cover;
 }
+/* everything from hear whas to align them in the center to make it more appealing */
 h1{
   text-align: center;
 }
 p{
   text-align: center;
+  
 }
-a{
-  text-decoration: none;
-}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>page 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(234, 219, 179);
+            font-family: sans-serif;
+        }
+        .form-wrap{
+            width: 320px;
+            background-color: #3e3d3d; 
+            padding: 40px 20px;
+            box-sizing: border-box;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        h1{
+            text-align: center;
+            color: #fff;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+        input{
+            width: 100%;
+            background-color: none;
+            border: 1px solid #fff; 
+            border-radius: 3px;
+            padding: 6px 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: rgb(255, 0, 0);
+            border: 0;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover{  
+            background-color: #dc5757;
+            transition: .4s;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-wrap">
+        <form method="post">
+            <h1>Register</h1>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="text" id="username" name="username" placeholder="username" required>
+            <input type="email" id="email" name="email" placeholder="email" required>
+            <input type="password" id="password" name="password" placeholder="password" required>
+            <input type="password" id="confrim-passowrd" name="confrim-passowrd" placeholder="confrim password">
+            <input type="submit" value="sign up" >
+        </form>
+    </div>
+</body>
+</html>

@@ -13,9 +13,10 @@
             background-color: rgb(234, 219, 179);
             font-family: sans-serif;
         }
+        /*  */
         .form-wrap{
             width: 320px;
-            background-color: #3e3d3d; 
+            background-color: rgb(62, 61, 61); 
             padding: 40px 20px;
             box-sizing: border-box;
             position: fixed;
@@ -23,6 +24,7 @@
             top: 50%;
             transform: translate(-50%,-50%);
         }
+        /* the header for the form */
         h1{
             text-align: center;
             color: #fff;
@@ -40,26 +42,29 @@
             font-size: 16px;
         }
         input[type="submit"] {
-            background-color: rgb(255, 0, 0);
+            background-color: rgb(255, 218, 124);
             border: 0;
             cursor: pointer;
         }
         input[type="submit"]:hover{  
-            background-color: #dc5757;
+            background-color: #fcc52f;
             transition: .4s;
         }
     </style>
 </head>
 <body>
     <div class="form-wrap">
-        <form method="post">
+        <!-- action is for it to redirect the the main page after entering and method doesnt make the data that you put in the form privit -->
+        <form action="index.html" method="get">
             <h1>Register</h1>
+            <!-- i only used input becaue i didnt want words outside the box -->
             <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="text" id="username" name="username" placeholder="username" required>
+            <input type="text" id="last name" name="last name" placeholder="Last name" required>
+            <label></label>
             <input type="email" id="email" name="email" placeholder="email" required>
             <input type="password" id="password" name="password" placeholder="password" required>
             <input type="password" id="confrim-passowrd" name="confrim-passowrd" placeholder="confrim password">
-            <input type="submit" value="sign up" >
+            <input type="submit" value="sign up">
         </form>
     </div>
 </body>

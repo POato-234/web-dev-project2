@@ -17,7 +17,7 @@
             width: 320px; /*the main width for the form*/
             background-color: #3e3d3df5; /*the background color of the form */
             padding: 40px 20px; /*for the inside spacing*/
-            box-sizing: border-box; /*inclueds the padding*/
+            /*box-sizing: border-box; /*inclueds the padding*/
             position: fixed;/*its in a fixed position*/
             left: 50%;
             top: 50%;
@@ -32,14 +32,13 @@
         }
         label, legend {
             color: white; /*a white color for text*/
-            display: block; /*takes the full width*/
+            display: inline; /* takes the full width*/
             margin-bottom: 10px;
         }
         input[type="radio"] {
             margin-right: 5px; /*small space between radio and lable*/
         }
-        input, textarea {
-            width: 100%; /*full width*/
+        input, textarea {   
             border: 1px solid #fff; /*a white border*/
             border-radius: 3px; 
             padding: 6px 10px; /*adds padding inside the inpute and texterea*/
@@ -68,11 +67,12 @@
 <body>
     <div class="form-wrap">
         <form action="index.html" method="get"> <!--it tekes you back to the main page using the GET-->
-            <h1>cantact us</h1> 
+            <h1>Contact Us</h1> 
             <fieldset style="border: none; padding: 0; margin: 0 0 20px 0;">
                 <legend id="color">Was this website helpful?</legend>
                 <input type="radio" name="feedback" id="yes" value="yes">
-                <label for="yes">Yes</label><br>
+                <label for="yes" >Yes</label> 
+                <br>
                 <input type="radio" name="feedback" id="no" value="no">
                 <label for="no">No</label>
             </fieldset>

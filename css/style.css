@@ -1,45 +1,57 @@
+/* color family: Warm baige and deep red
+I chose these colors because i felt like it represents the indigenous culture.
+the the warm beige gives a feeling of warmth and calmness, while the deep red add boldness and energy 
+these 2 colors make the website stand out and makes it seem more professional. */
+
+/* for my website i used fir my primary color is a warm beige (#eadbb3), and my secondary (accent) color 
+is a deep red (#832121fc). These two colors are close to each other on the color wheel, which makes them analogous. */
+
+html{
+  font-size: 62.5%; /* makes 1rem = 10px for easier scalling*/
+}
 body {
     margin: 0;
-    font-family: sans-serif;
-    background-color: rgb(234, 219, 179);
+    font-family: 'Times New Roman', Times, serif; /*sets the font style*/
+    background-color: #eadbb3; /*the background color as warm beige*/
+    font-size: 1.6rem;  /*makes the main font size for the body as 16px since i put 62.5% as the font size on the html*/
+    line-height: 2.4rem; /* gives good spacing for readability*/
 }
+/* container for layout */
 .conatiner{
   width: 80;
-  margin: auto;
+  margin: auto; /* makes it that it is in the center*/ 
 }
 header{
-  background-color: #832121fc;
-  position: fixed;
-  z-index: 1000;
-  animation: stickynav linear forwards;
-  width: 100%;
+  background-color: #832121fc; /*deep red background color for the navigation bar*/
+  position: fixed; /* fixes the header to the top*/
+  z-index: 1000; /* places it about other elements*/
+  animation: stickynav linear forwards; /*adds animation*/
+  width: 100%; /* full size of width*/
   
 }
 header::after{
   content: '';
   display:table;
-  clear: both;
+  clear: both;/* clears float*/
 }
-/* this was to make the logo go to the left side if the navigation */
 .logo{
-  float: left;
-  margin-left: 25px;
+  float: left;/* makes the logo float left of the nav bar*/
+  margin-left: 25px; /*gives space away from the left edge*/
   color: white;
 }
-/*  put this in for to remove the color and underline of the link */
 .logo a{
-  text-decoration: none;
-  color: white;
+  text-decoration: none;/*this to remove the underline on the links in the navbar*/
+  color: white;/* changes the color to white*/
 }
 /* navigation bar  */
 nav{
-  float: right;
+  float: right; /* aligns the naviagtion bar to the right side of the header*/ 
 }
 /* the putting the unorderd list in place and changed made it that it didnt show the dots */
 nav ul{
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  list-style-type: none; /*removes bullet points*/
 }
 /* for the list i put in inline block so it would kind if float in the middle */
 nav li{
@@ -59,40 +71,64 @@ nav a{
 nav a:hover{
   color: #000;
 }
-/* position is absolut to the li item*/
+/* position is absolute to the li item*/
 nav a::before{
   content: '';
-  display: block;
-  height: 5px;
-  width: 100%;
-  background-color: #EADBB2;
-  position: absolute;
-  top: 0;
+  display: block; /*makes it act like a block for the height and widht*/
+  height: 5px; /*hieght and widthof the line over the home e.t.c*/ 
+  width: 100%; 
+  background-color: #eadbb2; /*the color of the line*/ 
+  position: absolute; /*positions the line absolute inside the li*/
+  top: 0; /*aligns the underline over the top of the nav item*/
   width: 0;
-  /* this is for the bar over the home e.t.c, it animates in and out */
-  transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms; /* this is for the bar over the home e.t.c, it animates in and out */
 }
-/* the size of the line over the li items since it absolute it is as big as the text */
 nav a:hover::before{
-  width: 100%;
+  width: 100%;/* the size of the line over the li items since it absolute it is as big as the text */
 }
-/*  this was a part of the logo to change the color of the number 1 */
 span{
-  color: red;
+  color: red;/*  this was a part of the logo to change the color of the number 1 */
 }
 /* for the main image to make it as big as possible */
 .image{
-  position: relative;
-  width: 100%;
-  height: 100vh;
+  position: relative; /*so navbar can go over it*/
+  width: 100%; /*makes it stretch full width of screen*/
+  height: 100vh; /*makes it the full height of screen*/
   background-size: cover;
 }
 /* everything from hear whas to align them in the center to make it more appealing */
 h1{
-  text-align: center;
+  text-align: center; /*centers the heading*/
+  font-size: 3.6rem; /*36px text size*/
+  font-weight: bold; /* makes heading bold*/
+  text-transform: uppercase; /*makes heading upercase*/
+  letter-spacing: 0.1em;/* adds spacing betweeen the letters*/
 }
 p{
-  text-align: center;
-  
+  /* text-align: center; centers the paragraphs */
+  margin-bottom: 1.5em; /*adds a little bit of space below each paragraph*/
+  margin-left: 30%;
+  margin-right: auto;
+  text-align: justify;
 }
+
+ul li ul.dropdown li{
+  display: block; /*makes the dropdown stuff align virticaly */
+}
+ul li ul.dropdown{
+  width: 150px; /*width of dropdown menue*/
+  background: #832121fc; /*the background color to match the navbar*/
+  position: absolute; /*determinds final location*/
+  z-index: 999; /*makes it appear above other elem*/
+  display: none; /*hides the dropdown menue */
+  
+
+}
+ul li ul a:hover{
+  background-color: none; /*doesnt have a background color but kept it because it is used to actualy make the menue drop down */
+}
+ul li:hover ul.dropdown{
+  display: block; /*makes the dropdown menue visable when you hover over it*/
+}
+
 

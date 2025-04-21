@@ -7,7 +7,7 @@ Teacher:Mrs.Hoitink
 
 School:PTC
 
-Date Last Modified:3/11/2025-->
+Date Last Modified:4/21/2025-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,60 +16,81 @@ Date Last Modified:3/11/2025-->
         <title>web dev project 2</title>
         <link rel="stylesheet" href="css/style.css">
         <style>
-            /* this was to make it so when you click the stuff on the navigation bar it has a smooth effect when going to that section in the page */
             html{
-                scroll-behavior: smooth;    
+                scroll-behavior: smooth;/* this was to make it so when you click the stuff on the navigation bar it has a smooth effect when going to that section in the page */
             }
             
             a{
                 text-decoration: none; /* remove the underline of the link*/
                 color: darkblue; /* to cange the original color*/ 
             }
-            .calss{
+            .class-container{
                 text-align: center;/* this was to align the images in the center   */
             }
-            .calss img{
+            .class-container img{
                 display: inline-block;/* alows to set width and hieght and it also lets the image to shrink and wrap
                 */
             }
             span{
-                color: rgb(255, 0, 0);
+                color: rgb(255, 0, 0); /* this is used to color only one part of the h1*/
+            }
+            #space-text{
+                word-spacing: o.5em; /* adds spacing between words*/
+            }
+            #contact-color{
+                color: yellow;
+            }
+            #header-color { 
+                color: #996515;
+            }
+            #color-for-header{
+                color: red;
             }
         </style>
     </head>
     <body>
-        <!-- navigation bar with classes for interactivity  -->
+        <!--navigation bar-->
         <header> 
             <div class="container">
-                <h2 class="logo"><a href="index.html">TREATY<span>1</span></a></h2>
+                <h2 class="logo"><a href="index.html">TREATY<span>1</span></a></h2> <!--logo with red span on the 1-->
                     <nav>
                         <ul>
                             <li><a href="index.html">home</a></li>
-                            <li><a href="#Communities">Communities</a></li>
-                            <li><a href="#Reserves">Reserves</a></li>
-                            <li><a href="#Treaty">Treaty</a></li>
-                            <li><a href="#Map">Map</a></li>
-                            <li><a href="index2.html"><span>sign up</span></a></li>
+                            <li>
+                                
+                                <a tabindex="0">More</a>
+                                <ul class="dropdown"> <!--a dropdown menue-->
+                                    <li><a href="#Communities" aria-label="go to the Communities section">Communities</a></li>
+                                    <li><a href="#Reserves" aria-label="go to reserves section">Reserves</a></li>
+                                    <li><a href="#Treaty" aria-label="go to treaty section">Treaty</a></li>
+                                    <li><a href="#Map" aria-label="go to map section">Map</a></li>
+                                    <li><a href="#Differences" aria-label="go to differences between treaties section">Differences</a></li>
+                                    <li><a href="#Negotiated" aria-label="go to negotiated section">Negotiation</a></li>
+                                    <li><a href="#Video" aria-label="go to the video section">video</a></li>
+                                </ul> 
+                            </li>
+                            <li><a href="index2.html" id="contact-color">contact</a></li> <!--contact page for segustions-->
                         </ul>
                     </nav>
             </div>
         </header>
+        <!-- the main image on the start on the page -->
         <div> 
-            <img  src="images/maxresdefault.jpg" alt="A picture of a british man a first nation treaty making" class="image">
+            <img  src="images/maxresdefault.jpg" alt="A picture of a british man and first nation treaty making" class="image">
             <figcaption><a href="https://www.gov.mb.ca/legislature/about/land_acknowledgement.html">Img source</a></figcaption>
         </div>
         <section>
             <!-- div to group them together, and the class is to center the image -->
-                        <div class="calss">
-                            <h1 id="Communities">Communities involved</h1>
+                        <div class="class-container">
+                            <h1 id="Communities" tabindex="0">Communities involved</h1>
                             <br>
-                                <img src="images/Treaty_1_Territory.png" alt="A map of treaty 1, highlighing the lower part of manitoba" width="500" height="300">
+                                <img tabindex="0" src="images/Treaty_1_Territory.png" alt="A map of treaty 1, highlighing the lower part of manitoba" width="500" height="300">
                                 <!-- figcap to show where i go the sorce from  -->
                                 <figcaption><a href="https://en.wikipedia.org/wiki/Treaty_1"> Img source</a></figcaption>
-                                <p>Treaty 1 is and agreement that was established on august 3, 1871, between the Crown,<br>
-                                    Anishinaabe, Swampy Cree, Canadian based first nation. A series of treaty called the <br>
-                                    numberd Treaty that occured between 1871 and 1921, it was held to be essentialy about <br>
-                                    peace with each treaty. <br>
+                                <p tabindex="0">Treaty 1 is and agreement that was established on august 3, 1871, between the <br>
+                                    Crown, Anishinaabe, Swampy Cree, Canadian based first nation. A series of treaty <br>
+                                    called the numberd Treaty that occured between 1871 and 1921, it was held to be <br>
+                                    essentialy about peace with each treaty. <br>
                                 </p>
                         <figcaption><a href="https://en.wikipedia.org/wiki/Treaty_1#:~:text=Significance%20of%20Treaty%201,-The%20signing%20of&text=For%20Governor%20Adams%20Archibald%20the,held%20a%20much%20larger%20significance.">Read more</a></figcaption>
                     </div>
@@ -81,44 +102,88 @@ Date Last Modified:3/11/2025-->
         <hr width="500" size="5" color="black">
         <br>
         <br>
-            <div class="calss">
+            <div class="class-container">
                 <!-- id is a part if the navigation where it goes to this section  -->
-                <h1 id="Reserves">Urban Reserve</h1>
-                    <img src="images/Seven_nations_copy.jpg" alt="A map of the Seven first nations at the begining of the war betwen the french and british" width="500" height="300"> 
+                <h1 id="Reserves" tabindex="0">Urban Reserve</h1>
+                    <img tabindex="0" src="images/Seven_nations_copy.jpg" alt="A map of the Seven first nations at the begining of the war betwen the french and british" width="500" height="300"> 
                     <figcaption><a href="https://www.winnipeg.ca/fr/node/33410">Img source</a></figcaption>
-                    <p>Winnipeg MB treaty 1 territory and the city of winnipeg have arrived at the Gaawijijigemangit Agreement, <br>
-                    that would see the city of Winnipeg provide services for a proposed urban reserve at the Naawi-Oodena site <br>
-                    the government council of the Treaty 1 nation had oproved of the agreement May 27, 2022. Now the agreement <br>
-                    only need the opproval of the winnipeg city council to be able to go forward to sign with the 7 treaty 1 first <br>
-                    nation territorys. <br>
+                    <p  tabindex="0">Winnipeg MB treaty 1 territory and the city of winnipeg have arrived at the <br>
+                        Gaawijijigemangit Agreement, that would see the city of Winnipeg provide <br>
+                        services for a proposed urban reserve at the Naawi-Oodena site the government <br>
+                        council of the Treaty 1 nation had oproved of the agreement on May 27, 2022. <br>
+                        Now the agreement only need the opproval of the winnipeg city council to <br>
+                        be able to go forward to sign with the 7 treaty 1 first nation territorys. <br>
                 </p>
                 <figcaption><a href="https://www.winnipeg.ca/fr/node/33410">Read more..</a></figcaption>
         </div>
-        <hr width="500" size="5" color="black">
+        <hr width="500" size="5" color="black"> <!--this is the line between each to divid them from each other-->
         <br>
         <br>
-        <div class="calss">
-            <h1 id="Treaty">What Was Included In The Treaty?</h1>
-                <img src="images/4913942c-18ec-4c1c-be27-6d74ec04cfbe.jpg" alt="2 metal coins, the first one has victoria regina, and the second one has 2 men shaking hands for treaty making." width="500" height="300">
+        <div class="class-container">
+            <h1 id="Treaty" tabindex="0">What Was Included In The Treaty?</h1>
+                <img tabindex="0" src="images/4913942c-18ec-4c1c-be27-6d74ec04cfbe.jpg" alt="2 metal coins, the first one has victoria regina, and the second one has 2 men shaking hands for treaty making." width="500" height="300">
                 <figcaption><a href="https://www.thecanadianencyclopedia.ca/en/article/aboriginal-treaties">Img source</a></figcaption>
-                <p>Under the terms of treaties each band received larg 160 acres of land for each family of five, <br>
-                families under 5 will receive samller land in. In treaty 1, the band of Yellow Quill recieved <br>
-                a 25 square miles of land to be laid out arounf the reserve. The government had also agreed to <br>
-                maintain school on each reserve whenever the "indians" wanted it. The government also made it  <br>        
-                porhibited the introduction or sale of liquor on each reserves. <br>
+                <p tabindex="0">Under the terms of treaties each band received larg 160 acres of land for each <br>
+                    family of five, families under 5 will receive samller land in. In treaty 1, the<br>
+                    band of Yellow Quill recieved a 25 square miles of land to be laid out around <br>
+                    the reserve. The government had also agreed to maintain school on each reserve<br>
+                    whenever the "indians" wanted it. The government also made it porhibited the <br>
+                    introduction or sale of liquor on each reserves. <br>
             </p>
             <figcaption><a href="https://www.rcaanc-cirnac.gc.ca/DAM/DAM-CIRNAC-RCAANC/DAM-TAG/STAGING/texte-text/tre1-2_1100100028661_eng.pdf">Read more..</a></figcaption>
         </div>
+        <hr width="500" size="5" color="black"><!--this is the line between each to divid them from each other-->
+        <br>
+        <br>
+        <div class="class-container">
+            <h1 tabindex="0" id="Negotiated">Where was treaty <span id="header-color">1</span>  negotiated?</h1>
+            <img tabindex="0" src="images/03-map-lower-fort-garry-canada.webp" alt="a picture of a map showing manitoba and it has a destination marked on lower fort garry" width="500" height="300">
+            <figcaption><a href="https://lookoome.home.blog/2023/06/02/canada-lower-fort-garry/"></a></figcaption>
+            <p id="space-text" tabindex="0">Treaty 1 was negotiated and signed at lower fort garry in August 1871, between <br>
+                the Crown and the Anishinaabe and Swampy Cree, canadian based First Nations. <br>
+                The first of the treaties were called numbered treaties  that occured in <br>
+                beteen 1871 and 1921, it was essentialy held tobe about peace  and friendship <br>
+                but 8 days later the treaty making ended with the indigenous groups agreeing <br>
+                to give up there land in southern manitoba to the crown in exchange for goods <br>
+                like clothing and farming tools. but the leaders did not acctualy intend to <br>
+                give up the land but they believed that the land should be shared no surrenderd. <br>
+        </p>
+            <figcaption><a href="https://en.wikipedia.org/wiki/Treaty_1?utm_source=chatgpt.com">Read more..</a></figcaption>
+        </div>
         <hr width="500" size="5" color="black">
         <br>
         <br>
-        <div class="calss">
-            <h1 id="Map">Map</h1>
-            <iframe src="https://native-land.ca/" title="first nation land map" frameborder="0" width="900" height="500"></iframe>
+        <div class="class-container">
+            <h1 tabindex="0" id="Differences">What makes treaty <span id="color-for-header">1</span> different?</h1>
+            <img tabindex="0" src="images/treaties1_2_20_online_01-1440x1161.jpg" alt="A picture showing treaty 1 and 2 and it shows the differences between the trading post the missions the overland transport rout." width="500" height="300">
+            <figcaption><a href="https://canadiangeographic.ca/articles/treaties-1-and-2-reflecting-on-the-150th-anniversary/"></a></figcaption>
+            <p tabindex="0">Treaty 1 is defferent than other treaties in many ways, it was the first formal <br>
+                land agreement between thecanadian government and indigenous people. And <br>
+                unlike other treaties treaty 1 was not given rights to go hunting and fishing, it <br>
+                was then includedin later treaties. <br>
+            </p>
+            <figcaption><a href="https://en.wikipedia.org/wiki/Treaty_1?utm_source=chatgpt.com">Read more..</a></figcaption>
+        </div>
+        <hr width="500" size="5" color="black">
+        <br>
+        <br>
+        <div class="class-container">
+            <h1 tabindex="0" id="Video">What is treay <span id="color-for-header">1</span>?</h1>
+            <iframe tabindex="0" width="560" height="315" src="https://www.youtube.com/embed/8O717cPRcf4?si=iYTuZdrt7z7Ekdhf" 
+            title="youtube video that talks and explains about treaty 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption><a href="https://www.youtube.com/watch?v=8O717cPRcf4">See more..</a></figcaption>
+        </div>
+        <hr width="500" size="5" color="black">
+        <br>
+        <br>
+        <div class="class-container">
+            <h1 tabindex="0" id="Map">Map</h1>
+            <iframe src="https://native-land.ca/" title="first nation land map" frameborder="0" width="900" height="500"></iframe> <!--an emeded youtube video-->
             <br>
         </div>
-        <footer>
-            <p>&copy; 2025 Treaty 1 | BY MARWAN
+        <footer> <!-- footer-->
+            <p tabindex="0">&copy; 2025 Treaty 1 | BY MARWAN </p>
         </footer>
     </body>
 

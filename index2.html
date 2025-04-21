@@ -3,71 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>page 2</title>
+    <title>contact pagee</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        body{
-            background-color: rgb(234, 219, 179);
-            font-family: sans-serif;
+        body {
+            background-color: #eadbb3; /*background color*/
+            font-family: sans-serif; /*main font style*/
         }
-        /*  */
-        .form-wrap{
-            width: 320px;
-            background-color: rgb(62, 61, 61); 
-            padding: 40px 20px;
-            box-sizing: border-box;
-            position: fixed;
+        .form-wrap {
+            width: 320px; /*the main width for the form*/
+            background-color: #3e3d3df5; /*the background color of the form */
+            padding: 40px 20px; /*for the inside spacing*/
+            box-sizing: border-box; /*inclueds the padding*/
+            position: fixed;/*its in a fixed position*/
             left: 50%;
             top: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%); /*for perfect centering*/
+            border-radius: 10px; /*a small border around it*/
         }
-        /* the header for the form */
-        h1{
-            text-align: center;
-            color: #fff;
-            font-weight: normal;
-            margin-bottom: 20px;
+        h1 {
+            text-align: center; /*puts it in the center*/
+            color: #fff; /*changes the color of the heading*/
+            font-weight: normal; 
+            margin-bottom: 20px; /*makes space*/
         }
-        input{
-            width: 100%;
-            background-color: none;
-            border: 1px solid #fff; 
-            border-radius: 3px;
-            padding: 6px 20px;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-            font-size: 16px;
+        label, legend {
+            color: white; /*a white color for text*/
+            display: block; /*takes the full width*/
+            margin-bottom: 10px;
+        }
+        input[type="radio"] {
+            margin-right: 5px; /*small space between radio and lable*/
+        }
+        input, textarea {
+            width: 100%; /*full width*/
+            border: 1px solid #fff; /*a white border*/
+            border-radius: 3px; 
+            padding: 6px 10px; /*adds padding inside the inpute and texterea*/
+            box-sizing: border-box; /*includes padding*/
+            margin-bottom: 20px; /*adds space*/
+            font-size: 16px; /*text size*/
+        }
+        textarea {
+            resize: none; /*doesnt allow you to resize the box*/
+            font-family: sans-serif; /*the font of text*/
         }
         input[type="submit"] {
-            background-color: rgb(255, 218, 124);
-            border: 0;
-            cursor: pointer;
+            background-color: rgb(255, 218, 124); /*a yellow button*/
+            border: 0; /*no border*/
+            cursor: pointer; /* the cursor points when you hover over the submit button*/
         }
-        input[type="submit"]:hover{  
-            background-color: #fcc52f;
-            transition: .4s;
+        input[type="submit"]:hover {  
+            background-color: #fcc52f; /*changes color on hover*/
+            transition: .4s; /* a little bit of smooth transition*/
         }
-        .color-for-form{
+        #color{
             color: white;
         }
     </style>
 </head>
 <body>
     <div class="form-wrap">
-        <form action="index.html" method="get"><!-- action is for it to redirect the the main page after entering and method doesnt make the data that you put in the form privit -->
-            <h1>Register</h1>
-            <legend class="color-for-form">was this website helpfull?</legend>
-                <input type="radio" name="yes" id="yes" value="yes">
-                <label for="yes">Yes</label>
-                <input type="radio" name="no" id="no">
-            <label for="no">No</label>
-            </legend>
+        <form action="index.html" method="get"> <!--it tekes you back to the main page using the GET-->
+            <h1>cantact us</h1> 
+            <fieldset style="border: none; padding: 0; margin: 0 0 20px 0;">
+                <legend id="color">Was this website helpful?</legend>
+                <input type="radio" name="feedback" id="yes" value="yes">
+                <label for="yes">Yes</label><br>
+                <input type="radio" name="feedback" id="no" value="no">
+                <label for="no">No</label>
+            </fieldset>
             <label for="story">If not, any suggestions?</label>
-            <textarea name="story" id="story" rows="5" cols="33"></textarea>
-            <input type="submit">
+            <textarea name="story" id="story" rows="5" cols="33" placeholder="Type your suggestions here..."></textarea>
+            <input type="submit" value="Submit">
         </form>
     </div>
 </body>
